@@ -1,4 +1,3 @@
-package Poo;
 
 /*
 Crie uma classe que represente uma Conta Corrente, devendo ter as propriedades Número da Conta, 

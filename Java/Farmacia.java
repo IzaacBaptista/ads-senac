@@ -1,4 +1,3 @@
-package Poo;
 import java.util.Date;
 
 public class Farmacia {

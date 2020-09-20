@@ -4,7 +4,6 @@ Criar a entidade Remédio, com suas características (atributos) e ações (mét
 criando 2 remédios em uma Farmácia e demonstrando as suas ações.
 */
 
-package Poo;
 
 public class RemedioUm {
     String nome;

@@ -1,4 +1,3 @@
-package Poo;
 
 public class Musica3 {
  // Características

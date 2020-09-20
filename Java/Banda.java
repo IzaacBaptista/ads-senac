@@ -1,4 +1,3 @@
-package Poo;
 
 public class Banda {
  public static void main(String[] args) {

@@ -1,4 +1,3 @@
-package Poo;
 
 /**
  * 1) Crie uma classe que represente uma Pessoa, 

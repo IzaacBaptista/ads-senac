@@ -1,4 +1,3 @@
-package Poo;
 /*
 Crie um programa que receba a pessoa criada e verifique qual o IMC.
 IMC Classificação

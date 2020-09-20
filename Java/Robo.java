@@ -1,4 +1,3 @@
-package Poo;
 
 /*
 Exercício 2: Criar a entidade Robô, com suas características (atributos) e ações (métodos) específicos, 

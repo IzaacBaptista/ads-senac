@@ -3,7 +3,6 @@ Exercício 3: Criar a entidade Cerveja, com suas características (atributos) e 
 criando 2 robôs em uma Loja e demonstrando as suas ações.
 */
 
-package Poo;
 
 public class Cerveja {
     String tipo;
@@ -16,13 +15,5 @@ public class Cerveja {
         this.teorAlcoolico = teorAlcoolico;
         this.fabricante = fabricante;
         this.temperatura = temperatura;
-
-        public void beber(){
-            if (this.temperatura > 10) {
-                
-            }
-        }
     }
-
-    
 }

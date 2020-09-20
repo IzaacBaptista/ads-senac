@@ -1,4 +1,3 @@
-package Poo;
 
 public class Balanca {
     public static void main(String[] args) {
