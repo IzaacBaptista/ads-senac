@@ -1,0 +1,29 @@
+use sistemavenda;
+SET FOREIGN_KEY_CHECKS = 0;
+truncate pais;
+truncate uf;
+SET FOREIGN_KEY_CHECKS = 1;
+select * from pais;
+INSERT INTO `pais` (nome_pais) VALUES ('Brasil');
+INSERT INTO `pais` (nome_pais) VALUES ('Argentina'),('Uruguai'),('Estados Unidos');
+INSERT INTO `pais` VALUES (NULL,'Mexico'),(NULL,'França'),(NULL,'Alemanha') ;
+INSERT INTO `pais` VALUES (0,'Itália'),(0,'Espanha'),(0,'Portugal') ;
+INSERT INTO `pais` VALUES (11,'Noruega');
+INSERT INTO `pais` VALUES (30,'Chile');
+INSERT INTO `pais` VALUES (NULL,'Peru');
+
+INSERT INTO `uf` (nome_uf,Pais_nro_pais) VALUES ('Texas',4),('Flórida',4),('Alasca',4),('Buenos Aires',2);
+SELECT * FROM `uf`;
+INSERT INTO `uf` (nro_uf, nome_uf, sigla_uf, Pais_nro_pais) VALUES (NULL, "Santa Catarina","SC",1),(NULL,"Rio Grande do Sul","RS",1);
+INSERT INTO `uf` VALUES (NULL, "Paraná","PR",1),(NULL,"São Paulo","SP",1);
+
+UPDATE `pais` SET nome_pais="Bélgica" WHERE nro_pais=10;
+SET autocommit=0;
+UPDATE `pais` SET nome_pais="Suécia";
+ROLLBACK;
+UPDATE `pais` SET nome_pais="Suécia" WHERE nome_pais='Bélgica';
+COMMIT;
+DELETE FROM `pais` WHERE nome_pais='Chile';
+SET autocommit=1;
+DELETE FROM `pais` WHERE nro_pais=31;
+DELETE FROM `pais` WHERE nro_pais=40;
