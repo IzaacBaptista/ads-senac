@@ -1,2 +1,3 @@
 # ads senac
- exercicios faculdade
+ exercicios da faculdade de ADS 
+ #Java #C #C++
