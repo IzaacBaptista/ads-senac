@@ -1,0 +1,37 @@
+create database if not exists `SistemaVeiculos`;
+use `SistemaVeiculos`;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`marca` (
+  `idmarca` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `marca` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idmarca`))
+ENGINE = InnoDB
+
+CREATE TABLE IF NOT EXISTS `mydb`.`modelo` (
+  `idmodelo` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `modelo` VARCHAR(45) NOT NULL,
+  `marca_idmarca` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`idmodelo`),
+  INDEX `fk_modelo_marca_idx` (`marca_idmarca` ASC) VISIBLE,
+  CONSTRAINT `fk_modelo_marca`
+    FOREIGN KEY (`marca_idmarca`)
+    REFERENCES `mydb`.`marca` (`idmarca`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+
+CREATE TABLE IF NOT EXISTS `mydb`.`veiculo` (
+  `idveiculo` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `placa` VARCHAR(7) NULL,
+  `chassi` VARCHAR(17) NOT NULL,
+  `ano_fabricacao` YEAR(4) NOT NULL,
+  `ano_modelo` YEAR(4) NOT NULL,
+  `modelo_idmodelo` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`idveiculo`),
+  INDEX `fk_veiculo_modelo1_idx` (`modelo_idmodelo` ASC) VISIBLE,
+  CONSTRAINT `fk_veiculo_modelo1`
+    FOREIGN KEY (`modelo_idmodelo`)
+    REFERENCES `mydb`.`modelo` (`idmodelo`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB

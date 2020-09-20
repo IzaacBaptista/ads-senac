@@ -1,0 +1,31 @@
+create database if not exists `SistemaVenda`;
+use `SistemaVenda`;
+CREATE TABLE `vendedor` (
+	`nro_vend` INT unsigned NOT NULL auto_increment,
+    `nome_vend` VARCHAR(50) NOT NULL,
+    `sexo_vend` tinyint unsigned null,
+	primary key(`nro_vend`),
+    UNIQUE INDEX `nro_vend_INDEX` (`nro_vend` ASC)
+    );
+
+CREATE TABLE `cliente` (
+	`nro_cliente` INT unsigned NOT NULL auto_increment,
+    `nome_cliente` VARCHAR(50) NOT NULL,
+    `logradouro` VARCHAR(75) NULL,
+	`numero` INT unsigned NULL,
+	`complemento` VARCHAR(50) NULL,
+	`cep` INT(8) unsigned NULL,
+	primary key(`nro_cliente`),
+    UNIQUE INDEX `nro_cliente_INDEX` (`nro_cliente` ASC)
+    );
+	
+CREATE TABLE `venda` (
+	`nro_venda` INT unsigned NOT NULL auto_increment,
+    `vendedor_nro_vend` INT unsigned NOT NULL,
+	`cliente_nro_cliente` INT unsigned NOT NULL,
+    `data_venda` DATETIME NOT NULL,
+	primary key(`nro_venda`),
+    UNIQUE INDEX `nro_venda_INDEX` (`nro_venda` ASC),
+	CONSTRAINT `fk_venda_vendedor` FOREIGN KEY(`vendedor_nro_vend`) REFERENCES `SistemaVenda`.`vendedor`(`nro_vend`),
+	CONSTRAINT `fk_venda_cliente` FOREIGN KEY(`cliente_nro_cliente`) REFERENCES `SistemaVenda`.`cliente`(`nro_cliente`)
+    );

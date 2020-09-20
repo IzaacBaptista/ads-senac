@@ -1,0 +1,80 @@
+﻿use `SistemaVenda`;
+
+
+INSERT INTO `SistemaVenda`.`venda` (`vendedor_nro_vend`, `cliente_nro_cliente`, `data_venda`) VALUES 
+
+('1', '2', '2001-05-17'),
+
+('4', '3', '2006-07-18'),
+
+('4', '6', '2010-04-04'),
+
+('4', '7', '2011-06-24'),
+
+('2', '2', '2012-05-04'),
+
+('3', '4', '2016-07-04'),
+
+('5', '5', '2019-06-24'),
+
+('1', '4', '2019-09-28'),
+
+('1', '6', '2020-06-28');
+
+INSERT INTO `SistemaVenda`. `vendedor` (nro_vend, nome_vend, sexo_vend) VALUES (
+
+1, 'Rafaela Barros Costa', 0),
+
+(2, 'José Castro Barbosa', 1),
+
+(3, 'Leila Ferreira Alves', NULL),
+
+(4, 'Danilo Barros Ferreira', NULL),
+
+(5, 'Laura Souza Melo', 0
+
+);
+
+
+
+INSERT INTO `SistemaVenda`. `cliente` (nro_cliente, nome_cliente, logradouro, numero, complemento, cep) VALUES (
+
+1, 'Kaua Carvalho Fernandes', 'Rua F', 627, 'casa', 12945771),
+
+(2, 'Samuel Barbosa Melo', NULL, NULL, NULL, NULL),
+
+(3, 'Isabela Barros Ribeiro', 'Rua Felipe dos Santos', 531, NULL, NULL),
+(4, 'Sofia Silva Alves', 'Rua C-11', 1474, NULL, 53405560),
+
+(5, 'Rebeca Rocha Barbosa', 'Rua Manuel Albano', 1420, 'Ap 701', 60861460),
+
+(6, 'Leila Carvalho Ribeiro', 'Praça Hermínio G. Bordim', 178, 'Quadra 2- casa 7', 19807324),
+
+(7, 'Tiago Martins Alves', 'Vila Nova Esperança', 1607, NULL, 40391226
+
+);
+
+
+
+UPDATE `SistemaVenda`.`venda` 
+SET 
+`vendedor_nro_vend` = '2' 
+WHERE (`nro_venda` = '3');
+
+
+
+UPDATE `SistemaVenda`.`cliente` 
+
+SET 
+
+`nome_cliente` = 'Rebecca Rocha Barbosa' 
+
+WHERE (`nro_cliente` = '5');
+
+
+
+
+
+DELETE FROM `SistemaVenda`.`cliente` 
+
+WHERE (`nro_cliente` = '7');

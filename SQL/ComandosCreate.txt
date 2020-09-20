@@ -1,0 +1,12 @@
+create database if not exists `SistemaVenda`;
+use `SistemaVenda`;
+CREATE TABLE `vendedor` (
+	`nro_vend` INT unsigned NOT NULL auto_increment,
+    `nome_vend` VARCHAR(50) NOT NULL,
+    `sexo_vend` tinyint unsigned null,
+	primary key(`nro_vend`),
+    UNIQUE INDEX `nro_vend_INDEX` (`nro_vend` ASC)
+    );
+
+SHOW TABLES;
+DESCRIBE `vendedor`;
