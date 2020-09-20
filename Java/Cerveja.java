@@ -1,6 +1,6 @@
 /*
 Exercício 3: Criar a entidade Cerveja, com suas características (atributos) e ações (métodos) específicos, 
-criando 2 robôs em uma Loja e demonstrando as suas ações.
+criando 2 TIPOS DE CERVEJAS em uma Loja e demonstrando as suas ações.
 */
 
 
