@@ -43,3 +43,22 @@ select concat(primeiro_nome, " ", ultimo_nome) from funcionario;
 select concat(primeiro_nome, " ", ultimo_nome) as "nome e sobrenome" from funcionario;
 
 select upper(concat(primeiro_nome, " ", ultimo_nome)) as "nome e sobrenome" from funcionario;
+
+select ucase(concat(primeiro_nome, " ", ultimo_nome)) as "nome e sobrenome" from funcionario;
+
+select lower(concat(primeiro_nome, " ", ultimo_nome)) as "nome e sobrenome" from funcionario;
+
+select lcase(concat(primeiro_nome, " ", ultimo_nome)) as "nome e sobrenome" from funcionario;
+
+select concat('R$ ', valor) as 'Valor do pagamento', data_de_pagamento from pagamento limit 10;
+
+select concat('R$ ', valor) as 'Valor do pagamento', data_de_pagamento as 'data de pagamento' from pagamento limit 10;
+
+select concat('R$ ', valor) as 'Valor do pagamento', date_format(data_de_pagamento, "%d/%m/%y") as 'data de pagamento' from pagamento limit 10;
+
+select concat('R$ ', valor) as 'Valor do pagamento', date_format(data_de_pagamento, "%d/%m/%Y") as 'data de pagamento' from pagamento limit 10;
+
+select concat('R$ ', valor) as 'Valor do pagamento', date_format(data_de_pagamento, "%d/%M/%Y") as 'data de pagamento' from pagamento limit 10;
+
+
+
