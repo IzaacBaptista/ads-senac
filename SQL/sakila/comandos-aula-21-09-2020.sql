@@ -39,3 +39,7 @@ select truncate(avg(preco_da_locacao),1) from filme;
 select concat(primeiro_nome, ultimo_nome) from funcionario;
 
 select concat(primeiro_nome, " ", ultimo_nome) from funcionario;
+
+select concat(primeiro_nome, " ", ultimo_nome) as "nome e sobrenome" from funcionario;
+
+select upper(concat(primeiro_nome, " ", ultimo_nome)) as "nome e sobrenome" from funcionario;
