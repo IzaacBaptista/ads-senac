@@ -60,5 +60,10 @@ select concat('R$ ', valor) as 'Valor do pagamento', date_format(data_de_pagamen
 
 select concat('R$ ', valor) as 'Valor do pagamento', date_format(data_de_pagamento, "%d/%M/%Y") as 'data de pagamento' from pagamento limit 10;
 
+select ultimo_nome from ator group by ultimo_nome;
 
+select ultimo_nome, count(*) from ator group by ultimo_nome;
 
+/*
+select max(count(ultimo_nome)) from ator group by ultimo_nome;
+*/
