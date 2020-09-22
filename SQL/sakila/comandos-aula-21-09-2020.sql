@@ -67,3 +67,5 @@ select ultimo_nome, count(*) from ator group by ultimo_nome;
 /*
 select max(count(ultimo_nome)) from ator group by ultimo_nome;
 */
+
+select ultimo_nome, count(*) from ator group by ultimo_nome having count(*) > 3;
