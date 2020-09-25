@@ -15,6 +15,8 @@ public ContaCorrenteDois(String numeroConta, String agencia, String nomeTitular)
     this.nomeTitular = nomeTitular; 
     this.saldo = 0;
 }
+public ContaCorrenteDois(int i, int j, double d, String string) {
+}
 public void deposito(double valor) {
     this.saldo += valor;
 }

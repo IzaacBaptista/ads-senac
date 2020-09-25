@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Farmacia {
  public static void main(String[] args) {
  Remedio dipirona = new Remedio("Dipirona",2020,15,"Dipirona + Cafeína",5);
