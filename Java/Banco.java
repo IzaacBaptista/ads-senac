@@ -20,7 +20,7 @@ public class Banco {
 
         //contaDois
         System.out.println("O saldo inicial da ContaDois é: R$ " + contaCorrenteDois.saldoTotal());
-        contaCorrenteDois.deposito(5000);
+        contaCorrenteTres.deposito(1800);
         contaCorrenteDois.saque(185.45);
         contaCorrenteDois.saque(578.97);
         contaCorrenteUm.transferencia(100.00);
