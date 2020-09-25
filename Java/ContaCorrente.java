@@ -28,4 +28,8 @@ public class ContaCorrente {
     public double saldoTotal() {
         return saldo;
     }
+
+    public void transferencia(double valor) {
+        this.saldo -= valor;
+    }
 }
