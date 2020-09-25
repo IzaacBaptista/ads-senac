@@ -15,6 +15,14 @@ public class Banco {
 
         System.out.println("O saldo atual é: R$ " + contaCorrenteUm.saldoTotal());
 
+        System.out.println("O saldo inicial é: R$ " + contaCorrenteDois.saldoTotal());
+
+        contaCorrenteDois.deposito(5000);
+        contaCorrenteDois.saque(185.45);
+        contaCorrenteDois.saque(578.97);
+
+        System.out.println("O saldo atual é: R$ " + contaCorrenteDois.saldoTotal());
+
         agenciaUm.imprimirContas();
     }
 }
