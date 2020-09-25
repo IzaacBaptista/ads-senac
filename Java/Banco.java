@@ -26,24 +26,27 @@ public class Banco {
 
         //contaTres
         System.out.println("O saldo inicial da ContaTres é: R$ " + contaCorrenteTres.saldoTotal());
-        contaCorrenteTres.deposito(5000);
-        contaCorrenteTres.saque(185.45);
-        contaCorrenteTres.saque(578.97);
-        System.out.println("O saldo atual da ContaTres é: R$ " + contaCorrenteDois.saldoTotal());
+        contaCorrenteTres.deposito(1800);
+        contaCorrenteTres.saque(285.45);
+        contaCorrenteTres.saque(378.97);
+        contaCorrenteTres.deposito(800);
+        System.out.println("O saldo atual da ContaTres é: R$ " + contaCorrenteTres.saldoTotal());
 
         //contaQuatro
         System.out.println("O saldo inicial da ContaQuatro é: R$ " + contaCorrenteQuatro.saldoTotal());
-        contaCorrenteQuatro.deposito(5000);
-        contaCorrenteQuatro.saque(185.45);
-        contaCorrenteQuatro.saque(578.97);
-        System.out.println("O saldo atual da ContaQuatro é: R$ " + contaCorrenteDois.saldoTotal());
+        contaCorrenteQuatro.deposito(10000);
+        contaCorrenteQuatro.saque(156.16);
+        contaCorrenteQuatro.saque(1200.60);
+        contaCorrenteQuatro.deposito(2600.10);
+        System.out.println("O saldo atual da ContaQuatro é: R$ " + contaCorrenteQuatro.saldoTotal());
 
         //contaCinco
         System.out.println("O saldo inicial da ContaCinco é: R$ " + contaCorrenteCinco.saldoTotal());
-        contaCorrenteCinco.deposito(5000);
-        contaCorrenteCinco.saque(185.45);
-        contaCorrenteCinco.saque(578.97);
-        System.out.println("O saldo atual da ContaCinco é: R$ " + contaCorrenteDois.saldoTotal());
+        contaCorrenteCinco.deposito(15000);
+        contaCorrenteCinco.saque(1165.19);
+        contaCorrenteCinco.saque(3578);
+        contaCorrenteCinco.deposito(500);
+        System.out.println("O saldo atual da ContaCinco é: R$ " + contaCorrenteCinco.saldoTotal());
 
         agenciaUm.imprimirContas();
     }
