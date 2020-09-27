@@ -1,5 +1,6 @@
 /*
-Crie uma classe que represente uma Conta Corrente, devendo ter as propriedades Número da Conta, 
+Crie uma classe que represente uma Conta Corrente, 
+devendo ter as propriedades Número da Conta, 
 Agência, Saldo, Nome do Titular e os métodos Depósito, Saque e Saldo Total.
 */
 public class ContaCorrente {
