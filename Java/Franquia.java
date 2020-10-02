@@ -4,14 +4,14 @@ public class Franquia {
     int id;
     String nome;
     String apelido;
-    String DataDeCriação;
+    String dataDeCriacao;
     ArrayList<Heroi> herois;
 
-    public Franquia(int id, String nome, String apelido, String DataDeCriação) {
+    public Franquia(int id, String nome, String apelido, String dataDeCriacao) {
         this.id = id;
         this.nome = nome;
         this.apelido = apelido;
-        this.DataDeCriação = DataDeCriação;
+        this.dataDeCriacao = dataDeCriacao;
         this.herois = new ArrayList<>();
     }
 
