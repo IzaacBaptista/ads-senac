@@ -2,13 +2,13 @@ import java.util.ArrayList;
 
 public class Filme {
     int id;
-    String DataDeLançamento;
+    String dataDeLancamento;
     double previsaoDeInvestimento;
     ArrayList<HeroisDoFilme> heroisDoFilmes;
 
-    public Filme(int id, String DataDeLançamento, double previsaoDeInvestimento) {
+    public Filme(int id, String dataDeLancamento, double previsaoDeInvestimento) {
         this.id = id;
-        this.DataDeLançamento = DataDeLançamento;
+        this.dataDeLancamento = dataDeLancamento;
         this.previsaoDeInvestimento = previsaoDeInvestimento;
         this.heroisDoFilmes = new ArrayList<>();
     }

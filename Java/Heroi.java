@@ -6,16 +6,16 @@ public class Heroi {
     String localizacao;
     String identidade;
     double preco;
-    ArrayList<Franquia> franquias;
+    Franquia franquia;
     ArrayList<HeroisDoFilme> heroisDoFilmes;
 
-    public Heroi(int id, String nome, String localizacao, String identidade, double preco) {
+    public Heroi(int id, String nome, String localizacao, String identidade, double preco, Franquia franquia) {
         this.id = id;
         this.nome = nome;
-        this.identidade = identidade;
         this.localizacao = localizacao;
+        this.identidade = identidade;
         this.preco = preco;
-        this.franquias = new ArrayList<>();
+        this.franquia = franquia;
         this.heroisDoFilmes = new ArrayList<>();
     }
 

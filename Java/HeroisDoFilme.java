@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class HeroisDoFilme {
-    ArrayList<HeroisDoFilme> Filmes;
+    ArrayList<Filme> Filmes;
     ArrayList<HeroisDoFilme> Heroi;
 
     public HeroisDoFilme() {
