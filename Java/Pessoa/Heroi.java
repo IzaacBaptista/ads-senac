@@ -2,6 +2,6 @@ package Pessoa;
 
 import Pessoa.Pessoa;
 
-public class Heroi {
+public class Heroi extends Pessoa{
     
 }
