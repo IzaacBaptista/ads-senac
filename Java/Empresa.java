@@ -1,4 +1,3 @@
-//import java.util.ArrayList;
 /*
 Desenvolver as entidades Gerente e Departamento contendo a seguinte estrutura:
 - Gerente

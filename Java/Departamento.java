@@ -24,7 +24,10 @@ public class Departamento {
     ) {
         this.id = id;
         this.descricao = descricao;
-        this.gerente = new Gerente(idGerente, nomeGerente, enderecoGerente, this);
+        this.gerente = new Gerente(idGerente, 
+        nomeGerente, 
+        enderecoGerente, 
+        this);
     }
 
     public void imprimirDepartamento() {
