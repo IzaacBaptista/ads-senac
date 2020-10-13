@@ -1,18 +1,19 @@
 import java.util.ArrayList;
-import Pessoa.Pessoa;
-
-public class Heroi extends Pessoa{
-    public int idHeroi;
-    public String identidade;
+public class Heroi {
+    int id;
+    String nome;
+    String localizacao;
+    String identidade;
+    double preco;
     Franquia franquia;
     ArrayList<HeroisDoFilme> heroisDoFilmes;
 
-    public Heroi(int idHeroi, String nome, String localizacao, String identidade, double preco, Franquia franquia) {
-        this.idHeroi = idHeroi;
-        super.nome = nome;
-        super.localizacao = localizacao;
+    public Heroi(int id, String nome, String localizacao, String identidade, double preco, Franquia franquia) {
+        this.id = id;
+        this.nome = nome;
+        this.localizacao = localizacao;
         this.identidade = identidade;
-        super.precoCache = precoCache;
+        this.preco = preco;
         this.franquia = franquia;
         this.heroisDoFilmes = new ArrayList<>();
     }
