@@ -11,8 +11,7 @@ public class TV {
     }
 	public void setLigada(boolean b) {
 	}
-    
-  }
+}  
   
   public interface ControleRemoto {
     void mudarCanal(int canal);

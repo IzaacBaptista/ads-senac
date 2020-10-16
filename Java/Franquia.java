@@ -14,7 +14,7 @@ public class Franquia {
         this.dataDeCriacao = dataDeCriacao;
         this.herois = new ArrayList<>();
 
-        franquias.add(this);
+        //franquias.add(this);
     }
     //referenciando (polimorfismo) o construtor FRANQUIA
     public Franquia (int idFranquia, String nome){
