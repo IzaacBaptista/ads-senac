@@ -27,7 +27,7 @@ public class Professor {
             System.out.println(materia.descricao);
         }
     }
-
+    /*
     public void conceituarAluno(Aluno notaAluno){
         this.alunos.add(notaAluno);
         if(notaAluno > 7) {
@@ -35,5 +35,5 @@ public class Professor {
         } else {
             System.out.println("Reprovado");
         }
-    }
+    }*/
 }
