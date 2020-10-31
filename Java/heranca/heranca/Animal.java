@@ -21,8 +21,45 @@ public class Animal {
         this.ambiente = ambiente;
     }
 
-    public void getNome(String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
-    
+
+    public void setComprimento(double comprimento) {
+        this.comprimento = comprimento;
+    }
+
+    public void setQtdPatas(int qtdPatas) {
+        this.qtdPatas = qtdPatas;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public void setAmbiente(String ambiente) {
+        this.ambiente = ambiente;
+    }
+
+    /*
+    public String getNome() {
+        return super.nome;
+    }
+
+    public double getComprimento() {
+        return super.comprimento;
+    }
+
+    public int getQtdPatas() {
+        return super.qtdPatas;
+    }
+
+    public String getCor() {
+        return super.cor;
+    }
+
+    public String getAmbiente() {
+        return super.ambiente;
+    }
+    */
 }
