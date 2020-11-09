@@ -48,6 +48,12 @@ Esta entidade agora será pai da entidade Herói.
 Também criaremos uma nova entidade Ator, no qual também será herança de Pessoa e possuirá o atributo nívelFamoso. 
 Lembrando que agora devemos tratar corretamente os encapsulamentos, polimorfismos e as demais adaptações necessárias.
 
-Deverá ser criado um arquivo principal para gerenciamento das informações dos objetos, onde deverão ser criados 10 heróis (a sua escolha) e 5 franquias. Cada Filme deverá possuir alguns heróis que estarão participando e ao final deverá ser exibida a Quantidade de Heróis por Companhia, a Quantidade de Filmes que cada Herói participou, o Valor que cada Herói gerou e as informações de Valor Previsto do Filme, Valor Total Investido e se gerou Lucro ou Perda.
+Deverá ser criado um arquivo principal para gerenciamento das informações dos objetos, 
+onde deverão ser criados 10 heróis (a sua escolha) e 5 franquias. 
+Cada Filme deverá possuir alguns heróis que estarão participando 
+e ao final deverá ser exibida a Quantidade de Heróis por Companhia, 
+a Quantidade de Filmes que cada Herói participou, 
+o Valor que cada Herói gerou e as informações de Valor Previsto do Filme, 
+Valor Total Investido e se gerou Lucro ou Perda.
 
 O código fonte deverá ser trabalhando dentro do GitHub, sendo sincronizado e aberto PR ao final do desenvolvimento.
