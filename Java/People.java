@@ -1,4 +1,6 @@
-public class People {
+import java.util.ArrayList;
+
+public abstract class People {
     protected String nome; 
     protected String localizacao;
     protected double preco;
@@ -32,6 +34,9 @@ public class People {
     public double getPreco() {
         return this.preco;
     }
+
+    abstract ArrayList<Filme>getFilme();
+    abstract void setFilme(Filme filme);
 
     @Override
     public String toString() {
