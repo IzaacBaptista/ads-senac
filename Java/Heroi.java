@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Heroi extends People{
+public class Heroi extends People implements Orcamento{
     int idHeroi;
     String nome;
     String localizacao;
@@ -106,6 +106,18 @@ public class Heroi extends People{
             "\nIdentidade: " + getIdentidade() + 
             "\nFranquia: " + getFranquia();
         return print;
+    }
+
+    @Override
+    ArrayList<Filme> getFilme() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public double qtdInvestimento() {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }

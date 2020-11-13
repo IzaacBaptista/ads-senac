@@ -1,4 +1,6 @@
-public class Ator extends People{
+import java.util.ArrayList;
+
+public class Ator extends People implements Orcamento {
     int idAtor;
     public String nivelFamoso;
 
@@ -50,9 +52,9 @@ public class Ator extends People{
 
     @Override
     public boolean equals(Object o) {
-        if  (o == this)
-        return true;
-        if  (!(o instanceof Ator)) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Ator)) {
             return false;
         }
         Ator ator = (Ator) o;
@@ -61,11 +63,30 @@ public class Ator extends People{
 
     @Override
     public String toString() {
-        return " ==== Ator ==== " +
-        "\nId: " + getIdAtor() +
-        "\nNome: " + getNome() +
-        "\nLocalização: " + getLocalizacao() +
-        "\nPreço: " + getPreco() +
-        "\nNível de Famoso: " + getNivelFamoso();
+        return " ==== Ator ==== " + 
+               "\nId: " + getIdAtor() + 
+               "\nNome: " + getNome() + 
+               "\nLocalização: " + getLocalizacao() + 
+               "\nPreço: " + getPreco() + 
+               "\nNível de Famoso: " + getNivelFamoso() +
+               "\nInvestimento: " + this.qtdInvestimento();
+    }
+
+    @Override
+    public double qtdInvestimento() {
+        double investimento = super.getPreco() * this.filmes.size();
+         return investimento;
+    }
+
+    @Override
+    ArrayList<Filme> getFilme() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    void setFilme(Filme filme) {
+        // TODO Auto-generated method stub
+
     }
 }
