@@ -1,6 +1,6 @@
 package ProvaFinal;
 //coments
 public interface BaseVeiculo {
-    abstract int quantidadeDeLocaçõesRealizadas();
+    public int quantidadeDeLocaçõesRealizadas();
     abstract default String seloDaEmpresa();
 }

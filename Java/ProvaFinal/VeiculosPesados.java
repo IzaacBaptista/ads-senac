@@ -2,14 +2,26 @@ package ProvaFinal;
 //coments
 import java.util.ArrayList;
 
-public class VeiculosPesados {
+public class VeiculosPesados extends Veiculo {
     int idVeiculosPesados;
     String restricoes;
     ArrayList<VeiculosLocados> veiculosLocados;
 
-    public VeiculosPesados(int idVeiculosPesados, String restricoes)    {
+    public VeiculosPesados(
+        int idVeiculosPesados, 
+        String restricoes,
+        String marca,
+        String modelo,
+        int ano,
+        double valorParaLocacao
+        )    
+        {
         this.idVeiculosPesados = idVeiculosPesados;
         this.restricoes = restricoes;
+        super.marca = marca;
+        super.modelo = modelo;
+        super.ano = ano;
+        super.valorParaLocacao = valorParaLocacao;
     }
 
     public void setIdVeiculosPesados(int idVeiculosPesados) {
