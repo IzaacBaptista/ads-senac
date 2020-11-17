@@ -10,6 +10,7 @@ public class Cliente {
     String cpf;
     int diasParaDevolucao;
     ArrayList<Locacao> locacoes;
+    private Locacao locacao;
 
     public Cliente(int idCliente, String nome, Date dataDeNascimento, String cpf, int diasParaDevolucao) {
         this.idCliente = idCliente;
