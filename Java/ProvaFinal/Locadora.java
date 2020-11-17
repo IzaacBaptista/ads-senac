@@ -1,18 +1,18 @@
 package ProvaFinal;
 
+import java.util.Scanner;
+
 public class Locadora {
-    public static void main(String[] args) {
-        Cliente pessoaUm = new Cliente(01, "Marcos", 1993.01;03.13.30.60, "999.999.999-99", 3);
 
-        Veiculo corsa = new VeiculosLeves(idVeiculosLeves, cor, marca, modelo, ano, valorParaLocacao);
+	public static void main(String[] args) {
 
-        VeiculosLeves saveiro = new VeiculosLeves(idVeiculosLeves, cor, marca, modelo, ano, valorParaLocacao);
+		Scanner entrada = new Scanner(System.in); //Entrada IdCliente no switch
 
-        VeiculosPesados f1000 = new VeiculosPesados(idVeiculosPesados, restricoes, marca, modelo, ano, valorParaLocacao);
+		// Lista com 5 Clientes
+		Cliente cliente1 = new Cliente(0, null, null, null, 0);
 
-        VeiculosLocados bmw = VeiculosLocados(int idVeiculoPesado, int VeiculoLeve, int idVeiculoLocado);
+				
 
-
-        
-    }
+		entrada.close();
+	}
 }
