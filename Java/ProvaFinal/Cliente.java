@@ -10,8 +10,11 @@ public class Cliente {
     String cpf;
     int diasParaDevolucao;
     ArrayList<Locacao> locacoes;
+    ArrayList<VeiculosLocados> veiculosLocados;
     private Locacao locacao;
+	public int diaDev;
 
+    //constructor
     public Cliente(int idCliente, String nome, Date dataDeNascimento, String cpf, int diasParaDevolucao) {
         this.idCliente = idCliente;
         this.nome = nome;
@@ -21,11 +24,12 @@ public class Cliente {
         this.locacoes = new ArrayList<>();
     }
 
-    public void qtdVeiculosLocados(){
+    // Método com a Quantidade de Veiculos Locados
+    public int qtdVeiculosLocados() {
+		return ((ArrayList<VeiculosLocados>) this.veiculosLocados).size();
+	}
 
-    }
-
-    public void setId(int id) {
+    public void setId(int idCliente) {
         this.idCliente = idCliente;
     }
 

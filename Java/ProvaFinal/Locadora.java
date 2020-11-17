@@ -8,10 +8,16 @@ public class Locadora {
 
 		Scanner entrada = new Scanner(System.in); //Entrada IdCliente no switch
 
-		// Lista com 5 Clientes
-		Cliente cliente1 = new Cliente(0, null, null, null, 0);
+        Cliente cliente1 = new Cliente(0, null, null, null, 0);
+        
+        Locacao locacao1 = new Locacao(0, 0, null, null, cliente1, null);
 
-				
+        cliente1.getIdCliente();
+        cliente1.qtdVeiculosLocados();
+
+        locacao1.PrecoTotal();
+        locacao1.AdicVeiculo(null);
+        locacao1.calculoData();
 
 		entrada.close();
 	}

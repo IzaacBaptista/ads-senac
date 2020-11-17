@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Ator extends People implements Orcamento {
     int idAtor;
     public String nivelFamoso;
+    private Object filmes;
 
     public Ator(String nome, String localizacao, double preco, int idAtor, String nivelFamoso) {
         super(nome, localizacao, preco);
@@ -74,7 +75,7 @@ public class Ator extends People implements Orcamento {
 
     @Override
     public double qtdInvestimento() {
-        double investimento = super.getPreco() * this.filmes.size();
+        double investimento = super.getPreco() * ((ArrayList<Filme>) this.filmes).size();
          return investimento;
     }
 
