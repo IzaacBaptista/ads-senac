@@ -10,6 +10,9 @@ public class Cliente {
     String cpf;
     int diasParaDevolucao;
     ArrayList<Locacao> locacoes;
+	public int diaDev;
+    private int veiculosLocados;
+    private Locacao locacao;
 
     public Cliente(int idCliente, String nome, Date dataDeNascimento, String cpf, int diasParaDevolucao) {
         this.idCliente = idCliente;
@@ -21,8 +24,25 @@ public class Cliente {
     }
 
     public void qtdVeiculosLocados(){
-
+        this.veiculosLocados+=1;
     }
+
+    // Adição de Locações
+	void adicionarLocacao(Locacao locacao) {
+		this.locacoes.add(locacao);
+	}
+
+	// Lista de locações
+	int locacoes() {
+
+		int qtd = 0;
+		for(Locacao locacao :this.locacoes){
+			for(Veiculo veiculo: locacao.veiculos){
+				qtd++;
+			}
+		}
+		return qtd;
+	}
 
     public void setId(int id) {
         this.idCliente = idCliente;
@@ -93,5 +113,8 @@ public class Cliente {
                "\nCPF: " + getCpf() + 
                "\nDias para Devolução: " + getDiasParaDevolucao();
     }
+
+	public void mostrarCliente() {
+	}
    
 }
