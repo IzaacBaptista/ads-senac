@@ -7,7 +7,7 @@ public class VeiculosLeves extends Veiculo {
     String cor;
     ArrayList<VeiculosLocados> veiculosLocados;
 
-
+    //constructor
     public VeiculosLeves(
         int idVeiculosLeves, 
         String cor, 

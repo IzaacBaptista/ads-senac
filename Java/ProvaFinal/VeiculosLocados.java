@@ -2,13 +2,14 @@ package ProvaFinal;
 
 import java.util.ArrayList;
 
-//coments
+
 public class VeiculosLocados {
     int idVeiculoPesado;
     int idVeiculoLeve;
     int idVeiculoLocado;
     ArrayList<Locacao> locacoes;
 
+    //constructor
     public VeiculosLocados(int idVeiculoPesado, int VeiculoLeve, int idVeiculoLocado)    {
         this.idVeiculoPesado = idVeiculoPesado;
         this.idVeiculoLeve = idVeiculoLeve;
