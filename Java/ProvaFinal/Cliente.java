@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Cliente {
-    int idCliente;
-    String nome;
-    Date dataDeNascimento;
-    String cpf;
-    int diasParaDevolucao;
-    ArrayList<Locacao> locacoes;
-    ArrayList<VeiculosLocados> veiculosLocados;
-    private Locacao locacao;
+    protected int idCliente;
+    protected String nome;
+    protected Date dataDeNascimento;
+    protected String cpf;
+    protected int diasParaDevolucao;
+    public ArrayList<Locacao> locacoes;
+    public ArrayList<VeiculosLocados> veiculosLocados;
+    public Locacao locacao;
 	public int diaDev;
 
     //constructor
@@ -27,7 +27,9 @@ public class Cliente {
     // Método com a Quantidade de Veiculos Locados
     public int qtdVeiculosLocados() {
 		return ((ArrayList<VeiculosLocados>) this.veiculosLocados).size();
-	}
+    }
+    
+    //sets
 
     public void setId(int idCliente) {
         this.idCliente = idCliente;
@@ -62,6 +64,8 @@ public class Cliente {
         return this.idCliente;
     }
 
+    //gets
+    
     public String getNome() {
         return this.nome;
     }

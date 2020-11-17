@@ -1,12 +1,10 @@
 package ProvaFinal;
 
 import java.util.ArrayList;
-
-
 public class VeiculosLocados {
-    int idVeiculoPesado;
-    int idVeiculoLeve;
-    int idVeiculoLocado;
+    protected int idVeiculoPesado;
+    protected int idVeiculoLeve;
+    protected int idVeiculoLocado;
     ArrayList<Locacao> locacoes;
 
     //constructor
@@ -15,6 +13,8 @@ public class VeiculosLocados {
         this.idVeiculoLeve = idVeiculoLeve;
         this.idVeiculoLocado = idVeiculoLocado;
     }
+
+    //sets
 
     public void setIdVeiculoLocado(int idVeiculoPesado) {
         this.idVeiculoPesado = idVeiculoPesado;
@@ -28,6 +28,8 @@ public class VeiculosLocados {
         this.idVeiculoLocado = idVeiculoLocado;
     }
 
+    //gets
+    
     public int getIdVeiculoPesado() {
         return this.idVeiculoPesado;
     }

@@ -1,5 +1,4 @@
 package ProvaFinal;
-//coments
 import java.util.ArrayList;
 import java.util.Date;
 import java.text.DateFormat;
@@ -7,11 +6,11 @@ import java.util.List;
 import java.util.Calendar;
 
 public class Locacao {
-    int idLocacao;
-    int idCliente;
-    Date dataDeLocacao;
-    Date dataDeDevolucao;
-    Cliente cliente;
+    protected int idLocacao;
+    protected int idCliente;
+    protected Date dataDeLocacao;
+    protected Date dataDeDevolucao;
+    protected Cliente cliente;
     ArrayList<VeiculosLocados> veiculosLocados;
     List<Veiculo> veiculos = new ArrayList<>();
 	Calendar dataX = Calendar.getInstance();
