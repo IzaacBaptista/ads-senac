@@ -1,13 +1,12 @@
 package ProvaFinal;
 //coments
 import java.util.ArrayList;
-
 public class VeiculosLeves extends Veiculo {
-    int idVeiculosLeves;
-    String cor;
+    protected int idVeiculosLeves;
+    protected String cor;
     ArrayList<VeiculosLocados> veiculosLocados;
 
-
+    //constructor
     public VeiculosLeves(
         int idVeiculosLeves, 
         String cor, 
@@ -25,6 +24,8 @@ public class VeiculosLeves extends Veiculo {
         super.valorParaLocacao = valorParaLocacao;
     }
 
+    //sets
+
     public void setIdVeiculosLeves(int idVeiculosLeves) {
         this.idVeiculosLeves = idVeiculosLeves;
     }
@@ -33,6 +34,8 @@ public class VeiculosLeves extends Veiculo {
         this.cor = cor;
     }
 
+    //gets
+    
     public int getIdVeiculosLeves() {
         return this.idVeiculosLeves;
     }

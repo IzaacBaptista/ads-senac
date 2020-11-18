@@ -1,8 +1,11 @@
 package ProvaFinal;
-//coments
+
 public abstract class Veiculo {
-    String marca;
-    String modelo;
-    int ano;
-    double valorParaLocacao;
+    protected String marca;
+    protected String modelo;
+    protected int ano;
+    public double valorParaLocacao;
+	public double valorLoc;
+	public void getIdVeiculoLocado() {
+	}
 }
