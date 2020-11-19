@@ -3,12 +3,7 @@ package ProvaFinal;
 import java.util.Scanner;
 
 public class Locadora {
-<<<<<<< Updated upstream
-=======
-    public static void main(String[] args) {
-        Cliente pessoaUm = new Cliente(idCliente, nome, dataDeNascimento, cpf, diasParaDevolucao);
->>>>>>> Stashed changes
-
+    
 	public static void main(String[] args) {
 
 		Scanner entrada = new Scanner(System.in); //Entrada IdCliente no switch
