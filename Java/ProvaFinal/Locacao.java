@@ -31,23 +31,7 @@ public class Locacao {
             cliente.setCliente(this);
     }
 
-    // Adição de Veiculos
-	void AdicVeiculo(Veiculo veiculo) {
-		this.veiculos.add(veiculo);
-		//Contador Carros Locado
-		veiculo.getIdVeiculoLocado();
-		this.cliente.qtdVeiculosLocados();
-	}
-
-	double PrecoTotal() {
-		double total = 0;
-		for (Veiculo veiculo : veiculos) {
-			total += veiculo.valorLoc;
-		}
-		return total;
-	}
-
-	// Calculo Data de Devolução
+    // Calculo Data de Devolução
 	String calculoData() {
 		Date dataAtual = new Date();
 		dataX.setTime(dataAtual);

@@ -2,5 +2,8 @@ package ProvaFinal;
 //coments
 public interface BaseVeiculo {
     public int quantidadeDeLocaçõesRealizadas();
-    abstract default String seloDaEmpresa();
+    public default String seloDaEmpresa() {
+        System.out.println("Locadora");
+        return null;
+    }
 }

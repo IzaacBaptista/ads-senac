@@ -15,8 +15,8 @@ public class Locadora {
         cliente1.getIdCliente();
         cliente1.qtdVeiculosLocados();
 
-        locacao1.PrecoTotal();
-        locacao1.AdicVeiculo(null);
+        ((Object) locacao1).PrecoTotal();
+        ((Object) locacao1).AdicVeiculo(null);
         locacao1.calculoData();
 
 		entrada.close();

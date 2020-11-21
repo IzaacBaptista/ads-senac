@@ -12,9 +12,11 @@ import java.util.Properties;
 import javax.management.RuntimeErrorException;
 
 public class Conexao {
+    
     public static Connection getConnection() throws Exception {
         try{
-            Properties props = getProps();
+            Class.forName("com.mysql.jdbc.Driver");
+            //Properties props = getProps();
             final String url = "jdbc:mysql://localhost:3306/sakila";
             //final String url = props.getProperty("banco.url");
             final String user = "root";
@@ -23,15 +25,15 @@ public class Conexao {
             //final String url = props.getProperty("banco.senha");
 
             return DriverManager.getConnection(url, user, password);
-        }   catch (SQLException | IOException e) {
+        }   catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
-
+    /*
     private static Properties getProps() throws IOException {
         Properties props = new Properties();
         String path = "/exercicios/bancodedados/conexao.properties";
         props.load(Conexao.class.getResourceAsStream(path));
         return props;
-    }
+    }*/
 }
