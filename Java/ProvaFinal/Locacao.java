@@ -31,6 +31,14 @@ public class Locacao {
             cliente.setCliente(this);
     }
 
+    // Método adicionar locação
+    public static void addLocacao() {
+	}
+
+    // Método exibir locação
+	public static void printLocacao() {
+	}
+
     // Calculo Data de Devolução
 	String calculoData() {
 		Date dataAtual = new Date();

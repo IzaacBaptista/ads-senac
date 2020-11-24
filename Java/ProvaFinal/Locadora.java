@@ -4,21 +4,62 @@ import java.util.Scanner;
 
 public class Locadora {
     
-	public static void main(String[] args) {
+    //criando o scanner
+    static Scanner scanner;
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException    {
 
-		Scanner entrada = new Scanner(System.in); //Entrada IdCliente no switch
+        System.out.println("====== Locadora de veiculos =======");
 
-        Cliente cliente1 = new Cliente(0, null, null, null, 0);
+        //inicializando o scanner
+        scanner = new Scanner(System.in); 
         
-        Locacao locacao1 = new Locacao(0, 0, null, null, cliente1, null);
+        int opt = 0;
+        do {
+            System.out.println("-------------------------");
+            System.out.println("|    Digite uma opção   |");
+            System.out.println("| (1) Cadastrar Cliente |");
+            System.out.println("| (2) Cadastrar Veiculo |");
+            System.out.println("| (3) Cadastrar Locação |");
+            System.out.println("| (4)  Listar Clientes  |");
+            System.out.println("| (5)  Listar Veiculos  |");
+            System.out.println("| (6)  Listar Locação   |");
+            System.out.println("| (7)  Conectar Banco   |");
+            System.out.println("| (7)  Sair             |");
+            System.out.println("-------------------------");
 
-        cliente1.getIdCliente();
-        cliente1.qtdVeiculosLocados();
+            try {
+                opt = scanner.nextInt();
+                scanner.nextLine();
+            } catch (Exception e) {
+                System.out.println("Opção inválida");
+                opt = 00;
+            }
 
-        ((Object) locacao1).PrecoTotal();
-        ((Object) locacao1).AdicVeiculo(null);
-        locacao1.calculoData();
+            switch (opt)    {
+                case 1:
+                    Cliente.addCliente();
+                    break;
+                case 2:
+                    Veiculo.addVeiculo();
+                    break;
+                case 3:
+                    Locacao.addLocacao();
+                    break;
+                case 4:
+                    Cliente.printCliente();
+                    break;
+                case 5:
+                    Veiculo.printVeiculo();
+                    break;
+                case 6:
+                    Locacao.printLocacao();
+                    break;
+                default:
+                    break;
+            }
+        } while (opt != 0);
 
-		entrada.close();
+        // fechando o scanner
+        scanner.close();
 	}
 }

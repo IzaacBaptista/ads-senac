@@ -1,24 +1,32 @@
 package ProvaFinal;
 
+import java.util.Scanner;
+
 public abstract class Veiculo {
     protected String marca;
     protected String modelo;
     protected int ano;
-    public double valorParaLocacao;
 	public double valorLoc;
     private Object veiculos;
     private Object cliente;
-    private Object veiculo;
-	public void getIdVeiculoLocado() {
-    
-    }
+    private static Object veiculo;
 
-    // Adição de Veiculos
-	void AdicVeiculo(Veiculo veiculo) {
-		((Object) this.veiculos).add(veiculo);
-		//Contador Carros Locado
-		veiculo.getIdVeiculoLocado();
-		((Object) this.cliente).qtdVeiculosLocados();
+	//Contador Carros Locado
+	public void getIdVeiculoLocado() {
+		((Veiculo) veiculo).getIdVeiculoLocado();
+	}
+
+	// Adição de Veiculos
+	public static void addVeiculo() {
+		System.out.println("Cadastro do Veiculo\n");
+        System.out.println("Marca?\n");
+		String marca = Scanner.nextLine();
+		System.out.println("Modelo?\n");
+		String modelo = scanner.nextLine();
+		System.out.println("Ano?\n");
+		String ano = scanner.nextLine();
+		System.out.println("Valor?\n");
+        String valor = scanner.nextLine();
 	}
 
 	double PrecoTotal() {
@@ -29,4 +37,8 @@ public abstract class Veiculo {
 		return total;
 	}
 
+	//Método exibir veiculo
+	public static void printVeiculo() {
+		System.out.println();
+	}
 }
