@@ -10,7 +10,7 @@ public class VeiculosLocados {
     //constructor
     public VeiculosLocados(int idVeiculoPesado, int VeiculoLeve, int idVeiculoLocado)    {
         this.idVeiculoPesado = idVeiculoPesado;
-        this.idVeiculoLeve = idVeiculoLeve;
+        //this.idVeiculoLeve = idVeiculoLeve;
         this.idVeiculoLocado = idVeiculoLocado;
     }
 

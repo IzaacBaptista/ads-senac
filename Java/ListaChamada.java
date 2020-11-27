@@ -13,9 +13,9 @@ public class ListaChamada {
         //System.out.println(chamada.getValor(nome));
         //System.out.println(chamada.getValor(nome));
 
-        ChaveValor<String,String> chamadaDois = new ChaveValor<>();
+        new ChaveValor<>();
 
-        ImprimirChaveValor.imprimirPrimeiroValor(chamada);
+        //ImprimirChaveValor.imprimirPrimeiroValor(chamada);
 
     }
 }

@@ -1,6 +1,6 @@
-import java.util.ArrayList;
-
-public class BancoDeDados {
+//import java.util.ArrayList;
+/*
+public class BancoDeDados<T> {
     private ArrayList<T> banco = new ArrayList<>();
 
     public void insertValue(T valor) {

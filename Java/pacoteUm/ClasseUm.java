@@ -2,7 +2,7 @@ package pacoteUm;
 
 public class ClasseUm {
     public String nome;
-    private int idade;
+    //private int idade;
     protected boolean ativo;
     double preco;
 
