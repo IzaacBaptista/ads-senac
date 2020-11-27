@@ -13,7 +13,7 @@ public class VeiculosPesados extends Veiculo {
         String marca,
         String modelo,
         int ano,
-        double valorParaLocacao
+        double valorLoc
         )    
         {
         this.idVeiculosPesados = idVeiculosPesados;
@@ -21,7 +21,7 @@ public class VeiculosPesados extends Veiculo {
         super.marca = marca;
         super.modelo = modelo;
         super.ano = ano;
-        super.valorParaLocacao = valorParaLocacao;
+        super.valorLoc = valorLoc;
     }
 
     public void setIdVeiculosPesados(int idVeiculosPesados) {

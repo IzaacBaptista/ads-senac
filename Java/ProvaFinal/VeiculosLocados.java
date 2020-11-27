@@ -10,12 +10,11 @@ public class VeiculosLocados {
     //constructor
     public VeiculosLocados(int idVeiculoPesado, int VeiculoLeve, int idVeiculoLocado)    {
         this.idVeiculoPesado = idVeiculoPesado;
-        this.idVeiculoLeve = idVeiculoLeve;
+        //this.idVeiculoLeve = idVeiculoLeve;
         this.idVeiculoLocado = idVeiculoLocado;
     }
 
     //sets
-
     public void setIdVeiculoLocado(int idVeiculoPesado) {
         this.idVeiculoPesado = idVeiculoPesado;
     }
@@ -29,7 +28,6 @@ public class VeiculosLocados {
     }
 
     //gets
-    
     public int getIdVeiculoPesado() {
         return this.idVeiculoPesado;
     }

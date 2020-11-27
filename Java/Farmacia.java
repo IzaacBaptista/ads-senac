@@ -7,7 +7,7 @@ public class Farmacia {
  } catch (Exception e) {
  System.out.println(e.getMessage());
  }
- dipirona.validade();
- aspirina.validade();
+ //dipirona.validade();
+ //aspirina.validade();
  }
 }

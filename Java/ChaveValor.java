@@ -15,4 +15,8 @@ public class ChaveValor<K, V> {
     public void setValor(K key, V value) {
         this.mapping.put(key, value);
     }
+
+	public char[] getValor(String nome) {
+		return null;
+	}
 }

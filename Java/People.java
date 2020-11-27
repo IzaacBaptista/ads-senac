@@ -4,6 +4,7 @@ public abstract class People {
     protected String nome; 
     protected String localizacao;
     protected double preco;
+	public ArrayList<Filme> filmes;
 
     public People(String nome, String localizacao, double preco){
         this.nome = nome;

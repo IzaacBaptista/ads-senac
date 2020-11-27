@@ -3,7 +3,8 @@ import java.util.ArrayList;
 public class Ator extends People implements Orcamento {
     int idAtor;
     public String nivelFamoso;
-
+    private Object filmes;
+    
     public Ator(String nome, String localizacao, double preco, int idAtor, String nivelFamoso) {
         super(nome, localizacao, preco);
         this.idAtor = idAtor;
@@ -30,6 +31,9 @@ public class Ator extends People implements Orcamento {
         this.nivelFamoso = nivelFamoso;
     }
 
+    public void setFilme(Filme filme) {
+    }
+
     public String getNome() {
         return super.nome;
     }
@@ -48,6 +52,10 @@ public class Ator extends People implements Orcamento {
 
     public String getNivelFamoso() {
         return this.nivelFamoso;
+    }
+
+    ArrayList<Filme> getFilme() {
+        return super.filmes;
     }
 
     @Override
@@ -74,19 +82,7 @@ public class Ator extends People implements Orcamento {
 
     @Override
     public double qtdInvestimento() {
-        double investimento = super.getPreco() * this.filmes.size();
+        double investimento = super.getPreco() * ((ArrayList<Filme>) this.filmes).size();
          return investimento;
-    }
-
-    @Override
-    ArrayList<Filme> getFilme() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    void setFilme(Filme filme) {
-        // TODO Auto-generated method stub
-
-    }
+    }    
 }

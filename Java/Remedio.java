@@ -1,5 +1,3 @@
-
-import java.util.Date;
 public class Remedio {
     String nome;
     int anoFabricacao;
@@ -20,13 +18,13 @@ public void qtdReceitada(int qtdComprimidos) throws Exception {
     }
         System.out.println("Remédio OK!");
 }
-
+/*
 public void validade() {
     Date today = new Date();
         if((this.anoFabricacao + this.anosValidade) < today.getYear()) {
             System.out.println("Validade do remédio " + this.nome + " está OK!");
     } 
-}
+}*/
 }
 
 
