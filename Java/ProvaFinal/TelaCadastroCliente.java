@@ -2,6 +2,7 @@ package ProvaFinal;
 
 import java.awt.Container;
 import java.awt.GridLayout;
+import java.awt.FlowLayout;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -11,6 +12,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -55,7 +57,6 @@ public class TelaCadastroCliente extends JFrame {
     JLabel complemento = new JLabel("Complemento:");
     JLabel bairro = new JLabel("Bairro:");
     JLabel cidade = new JLabel("Cidade:");
-    //private JLabel labelAno = new JLabel("Informe o Ano:");
     JLabel estado = new JLabel("Estado:");
     JLabel cep = new JLabel("Cep:");
     JLabel cpf = new JLabel("CPF:");
@@ -65,6 +66,7 @@ public class TelaCadastroCliente extends JFrame {
     JComboBox comboEstado = new JComboBox();
 
     JTextArea textArea = new JTextArea("Comentários", 10, 30);
+    JScrollPane scrollPane = new JScrollPane(textArea);
 
     JButton oK = new JButton("OK");
     JButton cancelarCadastro = new JButton("Cancelar");
@@ -93,10 +95,10 @@ public class TelaCadastroCliente extends JFrame {
 
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new GridLayout(4, 2));
+        setLayout(new FlowLayout());
         Container cp = getContentPane();
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(4, 2));
+        panel.setLayout(new GridLayout(4,4));
         panel.add(nome);
         panel.add(campoNome);
         panel.add(email);
@@ -115,8 +117,10 @@ public class TelaCadastroCliente extends JFrame {
         panel.add(campoBairro);
         cp.add(panel);
 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
         JPanel panel2 = new JPanel();
-        panel2.setLayout(new GridLayout(2, 4));
+        panel2.setLayout(new GridLayout(3,4));
         panel2.add(cep);
         panel2.add(campoCep);
         panel2.add(cidade);
@@ -160,19 +164,26 @@ public class TelaCadastroCliente extends JFrame {
 
         cp.add(panel2);
 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
         JPanel panel3 = new JPanel();
-        panel3.setLayout(new GridLayout(4, 4));
+        panel3.setLayout(new GridLayout(1,1));
         panel3.add(textArea);
         cp.add(panel3);
         
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
         JPanel panel4 = new JPanel();
-        panel4.setLayout(new GridLayout(2,1));
+        panel4.setLayout(new FlowLayout(FlowLayout.LEFT));
         panel4.add(oK);
         panel4.add(cancelarCadastro);
         cp.add(panel4);
 
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
         pack();
-        //this.setSize(600,400);
+        this.setSize(600,350);
         this.setJMenuBar(menuBar);
         this.setVisible(true);
         this.setResizable(false);
