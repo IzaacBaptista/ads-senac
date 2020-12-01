@@ -19,15 +19,26 @@ public class TelaCadastroVeiculo extends JFrame {
     JMenuItem menuItemAbrir = new JMenuItem("Abrir");
     JMenuItem menuItemNovo = new JMenuItem("Novo");
     JMenuItem menuItemSalvar = new JMenuItem("Salvar");
+    JMenuItem menuItemExportar = new JMenuItem("Exportar");
     JMenuItem menuItemFechar = new JMenuItem("Fechar");
     JMenuItem menuItemColar = new JMenuItem("Colar");
     JMenuItem menuItemCopiar = new JMenuItem("Copiar");
     JMenuItem menuItemRecortar = new JMenuItem("Recortar");
     JMenuItem menuItemSubstituir = new JMenuItem("Substituir");
     JMenuItem menuItemLocalizar = new JMenuItem("Localizar");
+    JMenuItem menuItemOpcoesAvancadas = new JMenuItem("Opções Avançadas");
+    JMenuItem menuItemTutoriais = new JMenuItem("Tutoriais");
+    JMenuItem menuItemContato = new JMenuItem("Contato");
+    JMenuItem menuItemAtualizacoes = new JMenuItem("Updates");
+    JMenuItem menuItemLogin = new JMenuItem("Login");
+    JMenuItem menuItemLogout = new JMenuItem("Sair");
 
     JMenu menuArquivo = new JMenu("Arquivo");
     JMenu menuEditar = new JMenu("Editar");
+    JMenu menuOpcoes = new JMenu("Opções");
+    JMenu menuAjuda = new JMenu("Ajuda");
+    JMenu menuSobre = new JMenu("Sobre");
+    JMenu menuConta = new JMenu("Conta");
 
     JMenuBar menuBar = new JMenuBar();
 
@@ -62,6 +73,7 @@ public class TelaCadastroVeiculo extends JFrame {
         menuArquivo.add(menuItemAbrir);
         menuArquivo.add(menuItemNovo);
         menuArquivo.add(menuItemSalvar);
+        menuArquivo.add(menuItemExportar);
         menuArquivo.addSeparator();
         menuArquivo.add(menuItemFechar);
 
@@ -71,9 +83,23 @@ public class TelaCadastroVeiculo extends JFrame {
         menuEditar.addSeparator();
         menuEditar.add(menuItemLocalizar);
         menuEditar.add(menuItemSubstituir);
+        
+        menuOpcoes.add(menuItemOpcoesAvancadas);
+
+        menuAjuda.add(menuItemTutoriais);
+
+        menuSobre.add(menuItemAtualizacoes);
+        menuSobre.add(menuItemContato);
+
+        menuConta.add(menuItemLogin);
+        menuConta.add(menuItemLogout);
 
         menuBar.add(menuArquivo);
         menuBar.add(menuEditar);
+        menuBar.add(menuOpcoes);
+        menuBar.add(menuAjuda);
+        menuBar.add(menuSobre);
+        menuBar.add(menuConta);
         
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout());

@@ -3,7 +3,9 @@ package ProvaFinal;
 import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.FlowLayout;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -21,15 +23,26 @@ public class TelaCadastroCliente extends JFrame {
     JMenuItem menuItemAbrir = new JMenuItem("Abrir");
     JMenuItem menuItemNovo = new JMenuItem("Novo");
     JMenuItem menuItemSalvar = new JMenuItem("Salvar");
+    JMenuItem menuItemExportar = new JMenuItem("Exportar");
     JMenuItem menuItemFechar = new JMenuItem("Fechar");
     JMenuItem menuItemColar = new JMenuItem("Colar");
     JMenuItem menuItemCopiar = new JMenuItem("Copiar");
     JMenuItem menuItemRecortar = new JMenuItem("Recortar");
     JMenuItem menuItemSubstituir = new JMenuItem("Substituir");
     JMenuItem menuItemLocalizar = new JMenuItem("Localizar");
+    JMenuItem menuItemOpcoesAvancadas = new JMenuItem("Opções Avançadas");
+    JMenuItem menuItemTutoriais = new JMenuItem("Tutoriais");
+    JMenuItem menuItemContato = new JMenuItem("Contato");
+    JMenuItem menuItemAtualizacoes = new JMenuItem("Updates");
+    JMenuItem menuItemLogin = new JMenuItem("Login");
+    JMenuItem menuItemLogout = new JMenuItem("Sair");
 
     JMenu menuArquivo = new JMenu("Arquivo");
     JMenu menuEditar = new JMenu("Editar");
+    JMenu menuOpcoes = new JMenu("Opções");
+    JMenu menuAjuda = new JMenu("Ajuda");
+    JMenu menuSobre = new JMenu("Sobre");
+    JMenu menuConta = new JMenu("Conta");
 
     JMenuBar menuBar = new JMenuBar();
 
@@ -61,14 +74,14 @@ public class TelaCadastroCliente extends JFrame {
     JLabel cep = new JLabel("Cep:");
     JLabel cpf = new JLabel("CPF:");
     JLabel rg = new JLabel("RG:");
-    JLabel nascimento = new JLabel("Nacimento: dd/mm/aa");
+    JLabel nascimento = new JLabel("Nascimento: dd/mm/aa");
 
     JComboBox comboEstado = new JComboBox();
 
     JTextArea textArea = new JTextArea("Comentários", 10, 30);
     JScrollPane scrollPane = new JScrollPane(textArea);
 
-    JButton oK = new JButton("OK");
+    JButton oK = new JButton("Salvar");
     JButton cancelarCadastro = new JButton("Cancelar");
 
     public TelaCadastroCliente(String titulo) {
@@ -80,6 +93,7 @@ public class TelaCadastroCliente extends JFrame {
         menuArquivo.add(menuItemAbrir);
         menuArquivo.add(menuItemNovo);
         menuArquivo.add(menuItemSalvar);
+        menuArquivo.add(menuItemExportar);
         menuArquivo.addSeparator();
         menuArquivo.add(menuItemFechar);
 
@@ -90,15 +104,29 @@ public class TelaCadastroCliente extends JFrame {
         menuEditar.add(menuItemLocalizar);
         menuEditar.add(menuItemSubstituir);
 
+        menuOpcoes.add(menuItemOpcoesAvancadas);
+
+        menuAjuda.add(menuItemTutoriais);
+
+        menuSobre.add(menuItemAtualizacoes);
+        menuSobre.add(menuItemContato);
+
+        menuConta.add(menuItemLogin);
+        menuConta.add(menuItemLogout);
+
         menuBar.add(menuArquivo);
         menuBar.add(menuEditar);
+        menuBar.add(menuOpcoes);
+        menuBar.add(menuAjuda);
+        menuBar.add(menuSobre);
+        menuBar.add(menuConta);
 
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new FlowLayout());
         Container cp = getContentPane();
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(4,4));
+        panel.setLayout(new GridLayout(3,4));
         panel.add(nome);
         panel.add(campoNome);
         panel.add(email);
@@ -179,6 +207,15 @@ public class TelaCadastroCliente extends JFrame {
         panel4.add(cancelarCadastro);
         cp.add(panel4);
 
+        oK.setBounds(10,30,100,22);
+        cancelarCadastro.setBounds(10,60,100,22);
+
+        oK.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e)  {
+                buttonConfirmaActionPerformed(e);
+            }
+        });
+
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
@@ -187,6 +224,20 @@ public class TelaCadastroCliente extends JFrame {
         this.setJMenuBar(menuBar);
         this.setVisible(true);
         this.setResizable(false);
+    }
+
+    private void buttonConfirmaActionPerformed(ActionEvent e)   {
+        int retorno = JOptionPane.showConfirmDialog(
+            this,
+            "Cliente cadastrado, deseja sair?",
+            "Fechar",
+            JOptionPane.OK_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE
+        );
+
+        if(retorno == JOptionPane.OK_CANCEL_OPTION) {
+            System.exit(1);
+        } 
     }
 
     public static void main(String[] args) throws Exception {
