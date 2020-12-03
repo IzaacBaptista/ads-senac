@@ -1,7 +1,6 @@
 
 import java.util.ArrayList;
 import java.util.Date;
-//import java.util.Scanner;
 import java.util.Scanner;
 
 public class Cliente {
@@ -12,17 +11,20 @@ public class Cliente {
     protected static int diasParaDevolucao;
     public ArrayList<Locacao> locacoes;
     public ArrayList<VeiculosLocados> veiculosLocados;
-    public Locacao locacao;
     public int diaDev;
 
+    //classe database
+    public static Database<Cliente> data = new Database();
+
     // constructor
-    public Cliente(int idCliente, String nome, String dataDeNascimento, String cpf, int diasParaDevolucao) {
-        this.idCliente = idCliente;
+    public Cliente(String nome, String dataDeNascimento, String cpf, int diasParaDevolucao) {
+        this.idCliente = data.IdCliente;
         this.nome = nome;
         this.dataDeNascimento = dataDeNascimento;
         this.cpf = cpf;
         this.diasParaDevolucao = diasParaDevolucao;
         this.locacoes = new ArrayList<>();
+        data.inserirValor(this);
     }
 
     // Método com a Quantidade de Veiculos Locados
@@ -80,7 +82,7 @@ public class Cliente {
     }
 
     public void setCliente(Locacao locacao) {
-        this.locacao = locacao;
+        this.locacoes = locacoes;
     }
 
     public static int getIdCliente() {
@@ -103,6 +105,10 @@ public class Cliente {
 
     public static int getDiasParaDevolucao() {
         return Cliente.diasParaDevolucao;
+    }
+
+    public static ArrayList<Cliente>getClientes() {
+        return data.getValores();
     }
 
     @Override
