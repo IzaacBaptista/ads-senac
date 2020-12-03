@@ -1,22 +1,22 @@
-package ProvaFinal;
 
 import java.util.ArrayList;
 import java.util.Date;
 //import java.util.Scanner;
+import java.util.Scanner;
 
 public class Cliente {
-    protected int idCliente;
-    protected String nome;
-    protected Date dataDeNascimento;
-    protected String cpf;
-    protected int diasParaDevolucao;
+    protected static int idCliente;
+    protected static String nome;
+    protected static String dataDeNascimento;
+    protected static String cpf;
+    protected static int diasParaDevolucao;
     public ArrayList<Locacao> locacoes;
     public ArrayList<VeiculosLocados> veiculosLocados;
     public Locacao locacao;
-	public int diaDev;
+    public int diaDev;
 
-    //constructor
-    public Cliente(int idCliente, String nome, Date dataDeNascimento, String cpf, int diasParaDevolucao) {
+    // constructor
+    public Cliente(int idCliente, String nome, String dataDeNascimento, String cpf, int diasParaDevolucao) {
         this.idCliente = idCliente;
         this.nome = nome;
         this.dataDeNascimento = dataDeNascimento;
@@ -27,45 +27,51 @@ public class Cliente {
 
     // Método com a Quantidade de Veiculos Locados
     public int qtdVeiculosLocados() {
-		return ((ArrayList<VeiculosLocados>) this.veiculosLocados).size();
+        return ((ArrayList<VeiculosLocados>) this.veiculosLocados).size();
     }
 
-    //Método cadastrar cliente
+    // Método cadastrar cliente
     public static void addCliente() {
+        Scanner input = new Scanner(System.in);
         System.out.println("Cadastro do cliente\n");
         System.out.println("Nome do Clente?\n");
-        //Scanner nome = scanner.nextLine();
+        String nome = input.nextLine();
         System.out.println("Data de nascimento?\n");
-       // String data = scanner.nextLine();
+        String dataDeNascimento = input.nextLine();
         System.out.println("CPF do Clente?\n");
-        //String cpf = scanner.nextLine();
+        String cpf = input.nextLine();
+    }
+
+    // Método exibir cliente
+    public static void printCliente() {
+        System.out.println(" ==== Cliente ==== " + 
+        "\nId: " + getIdCliente() + 
+        "\nNome: " + getNome() + 
+        "\nData de Nascimento: " +  getDataDeNascimento() + 
+        "\nCPF: " + getCpf() + 
+        "\nDias para Devolução: " + getDiasParaDevolucao());
 	}
 
-    //Método exibir cliente
-	public static void printCliente() {
-        System.out.println();
-	}
-    
-    //sets
+    // sets
 
     public void setId(int idCliente) {
-        this.idCliente = idCliente;
+        Cliente.idCliente = idCliente;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
-    }
-    
-    public void setDataDeNascimento(Date dataDeNascimento) {
-        this.dataDeNascimento = dataDeNascimento;
+        Cliente.nome = nome;
     }
 
-    public void setCpf(String cpf)  {
-        this.cpf = cpf;
+    public void setDataDeNascimento(String dataDeNascimento) {
+        Cliente.dataDeNascimento = dataDeNascimento;
     }
 
-    public void setDiasParaDevolucao(int diasParaDevolucao)  {
-        this.diasParaDevolucao = diasParaDevolucao;
+    public void setCpf(String cpf) {
+        Cliente.cpf = cpf;
+    }
+
+    public void setDiasParaDevolucao(int diasParaDevolucao) {
+        Cliente.diasParaDevolucao = diasParaDevolucao;
     }
 
     public void setLocacao(Locacao locacoes) {
@@ -75,28 +81,28 @@ public class Cliente {
 
     public void setCliente(Locacao locacao) {
         this.locacao = locacao;
-	}
-
-    public int getIdCliente() {
-        return this.idCliente;
     }
 
-    //gets
-    
-    public String getNome() {
-        return this.nome;
-    }
-    
-    public Date getDataDeNascimento() {
-        return this.dataDeNascimento;
+    public static int getIdCliente() {
+        return Cliente.idCliente;
     }
 
-    public String getCpf()  {
-        return this.cpf;
+    // gets
+
+    public static String getNome() {
+        return Cliente.nome;
     }
 
-    public int getDiasParaDevolucao()  {
-        return this.diasParaDevolucao;
+    public static String getDataDeNascimento() {
+        return Cliente.dataDeNascimento;
+    }
+
+    public static String getCpf() {
+        return Cliente.cpf;
+    }
+
+    public static int getDiasParaDevolucao() {
+        return Cliente.diasParaDevolucao;
     }
 
     @Override

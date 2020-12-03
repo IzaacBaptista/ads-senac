@@ -1,4 +1,3 @@
-package ProvaFinal;
 
 import javax.swing.*;
 import javax.swing.JButton;

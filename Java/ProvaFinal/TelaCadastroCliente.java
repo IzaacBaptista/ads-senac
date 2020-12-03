@@ -1,4 +1,3 @@
-package ProvaFinal;
 
 import java.awt.Container;
 import java.awt.GridLayout;
