@@ -140,7 +140,7 @@ public class TelaCadastroLocacao extends JFrame {
     }
 
     public static void main(String[] args) {
-        TelaCadastroLocacao executar = new TelaCadastroLocacao("Cadastro de Veiculo");
+        TelaCadastroLocacao executar = new TelaCadastroLocacao("Cadastro Locação");
         executar.mostrarTela();
     }
 

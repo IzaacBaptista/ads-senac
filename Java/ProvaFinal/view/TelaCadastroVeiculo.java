@@ -137,14 +137,14 @@ public class TelaCadastroVeiculo extends JFrame {
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         pack();
-        this.setSize(600, 350);
+        this.setSize(600, 300);
         this.setJMenuBar(menuBar);
         this.setVisible(true);
         this.setResizable(false);
     }
 
     public static void main(String[] args) {
-        TelaCadastroVeiculo executar = new TelaCadastroVeiculo("Cadastro de Veiculo");
+        TelaCadastroVeiculo executar = new TelaCadastroVeiculo("Cadastro Veiculo");
         executar.mostrarTela();
     }
 }
