@@ -1,8 +1,8 @@
-package ProvaFinal;
 
 import java.util.ArrayList;
 import java.util.Date;
 //import java.util.Scanner;
+import java.util.Scanner;
 
 public class Cliente {
     protected int idCliente;
@@ -32,13 +32,14 @@ public class Cliente {
 
     //Método cadastrar cliente
     public static void addCliente() {
+        Scanner input = new Scanner(System.in);
         System.out.println("Cadastro do cliente\n");
-        System.out.println("Nome do Clente?\n");
-        //Scanner nome = scanner.nextLine();
-        System.out.println("Data de nascimento?\n");
-       // String data = scanner.nextLine();
-        System.out.println("CPF do Clente?\n");
-        //String cpf = scanner.nextLine();
+        System.out.println("Nome do Clente: \n");
+        String nome = input.nextLine();
+        System.out.println("Data de nascimento: \n");
+        String data = input.nextLine();
+        System.out.println("CPF do Clente: \n");
+        String cpf = input.nextLine();
 	}
 
     //Método exibir cliente

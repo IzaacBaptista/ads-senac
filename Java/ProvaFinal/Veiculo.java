@@ -1,4 +1,4 @@
-package ProvaFinal;
+import java.util.Scanner;
 
 public abstract class Veiculo {
     protected String marca;
@@ -14,15 +14,16 @@ public abstract class Veiculo {
 
 	// Adição de Veiculos
 	public static void addVeiculo() {
+        Scanner input = new Scanner(System.in);
 		System.out.println("Cadastro do Veiculo\n");
         System.out.println("Marca?\n");
-		//String marca = Scanner.nextLine();
+		String marca = input.nextLine();
 		System.out.println("Modelo?\n");
-		//String modelo = scanner.nextLine();
+		String modelo = input.nextLine();
 		System.out.println("Ano?\n");
-		//String ano = scanner.nextLine();
+		String ano = input.nextLine();
 		System.out.println("Valor?\n");
-        //String valor = scanner.nextLine();
+        String valor = input.nextLine();
 	}
 	/*
 	double PrecoTotal() {

@@ -29,7 +29,7 @@ int: I.D. do Cliente
 Date: Data de Locação
 Date: Data de Devolução
 
-Veículo Locados
+Veículos Locados
 int: I.D. da Locação
 int: I.D. do Veículo Level
 int: I.D. do Veículo Pesado

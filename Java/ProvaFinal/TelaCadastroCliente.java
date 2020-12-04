@@ -1,4 +1,3 @@
-package ProvaFinal;
 
 import java.awt.Container;
 import java.awt.GridLayout;
@@ -59,7 +58,7 @@ public class TelaCadastroCliente extends JFrame {
     JTextField campoCep = new JTextField();
     JTextField campoCPF = new JTextField();
     JTextField campoRG = new JTextField();
-    JTextField campoNascimento = new JTextField();;
+    JTextField campoNascimento = new JTextField();
 
     JLabel nome = new JLabel("Nome:");
     JLabel ddd = new JLabel("DDD:");
@@ -78,7 +77,7 @@ public class TelaCadastroCliente extends JFrame {
 
     JComboBox comboEstado = new JComboBox();
 
-    JTextArea textArea = new JTextArea("Comentários", 10, 30);
+    JTextArea textArea = new JTextArea("Comentários", 10, 20);
     JScrollPane scrollPane = new JScrollPane(textArea);
 
     JButton oK = new JButton("Salvar");
@@ -161,6 +160,7 @@ public class TelaCadastroCliente extends JFrame {
         panel2.add(campoCPF);
         panel2.add(nascimento);
         panel2.add(campoNascimento);
+        
 
         comboEstado.addItem("AC");
         comboEstado.addItem("AL");
@@ -235,7 +235,7 @@ public class TelaCadastroCliente extends JFrame {
             JOptionPane.QUESTION_MESSAGE
         );
 
-        if(retorno == JOptionPane.OK_CANCEL_OPTION) {
+        if(retorno == JOptionPane.CANCEL_OPTION) {
             System.exit(1);
         } 
     }
