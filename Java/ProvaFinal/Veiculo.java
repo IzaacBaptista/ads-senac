@@ -1,28 +1,29 @@
 import java.util.Scanner;
 
 public abstract class Veiculo {
-    protected String marca;
-    protected String modelo;
-    protected int ano;
+	public int id;
+    public String marca;
+    public String modelo;
+    public int ano;
 	public double valorLoc;
-    private static Object veiculo;
+	private static Object veiculo;
 
 	//Contador Carros Locado
-	public void getIdVeiculoLocado() {
-		((Veiculo) veiculo).getIdVeiculoLocado();
+	public int getIdVeiculoLocado() {
+		return ((Veiculo) veiculo).getIdVeiculoLocado();
 	}
 
 	// Adição de Veiculos
 	public static void addVeiculo() {
-        Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner( System.in );
 		System.out.println("Cadastro do Veiculo\n");
-        System.out.println("Marca?\n");
+        System.out.println("Marca: \n");
 		String marca = input.nextLine();
-		System.out.println("Modelo?\n");
+		System.out.println("Modelo: \n");
 		String modelo = input.nextLine();
-		System.out.println("Ano?\n");
+		System.out.println("Ano: \n");
 		String ano = input.nextLine();
-		System.out.println("Valor?\n");
+		System.out.println("Valor: \n");
         String valor = input.nextLine();
 	}
 	/*
