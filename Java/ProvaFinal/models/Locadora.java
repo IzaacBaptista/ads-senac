@@ -1,11 +1,14 @@
+package models;
 
 import java.util.Scanner;
+
+import controller.Conexao;
 
 public class Locadora {
     
     //criando o scanner
     static Scanner scanner;
-	public static void main(String[] args) throws InstantiationException, IllegalAccessException    {
+	public static void main(String[] args) throws Exception {
 
         System.out.println("====== Locadora de veiculos =======");
 
@@ -23,7 +26,7 @@ public class Locadora {
             System.out.println("| (5)  Listar Veiculos  |");
             System.out.println("| (6)  Listar Locação   |");
             System.out.println("| (7)  Conectar Banco   |");
-            System.out.println("| (7)  Sair             |");
+            System.out.println("| (8)  Sair             |");
             System.out.println("-------------------------");
 
             try {
@@ -53,6 +56,8 @@ public class Locadora {
                 case 6:
                     Locacao.printLocacao();
                     break;
+                case 7:
+                    Conexao.getConnection();
                 default:
                     break;
             }

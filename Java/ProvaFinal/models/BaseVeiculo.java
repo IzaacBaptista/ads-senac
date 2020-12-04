@@ -1,4 +1,5 @@
-//coments
+package models;
+
 public interface BaseVeiculo {
     public int quantidadeDeLocaçõesRealizadas();
     public default String seloDaEmpresa() {

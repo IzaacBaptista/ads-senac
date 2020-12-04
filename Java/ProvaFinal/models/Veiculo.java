@@ -1,3 +1,5 @@
+package models;
+
 import java.util.Scanner;
 
 public abstract class Veiculo {
@@ -15,26 +17,27 @@ public abstract class Veiculo {
 
 	// Adição de Veiculos
 	public static void addVeiculo() {
-		Scanner input = new Scanner( System.in );
+
+		//criando o scanner
+		Scanner scanner;
+
+		//inicializando o scanner
+		scanner = new Scanner(System.in);  
+
 		System.out.println("Cadastro do Veiculo\n");
         System.out.println("Marca: \n");
-		String marca = input.nextLine();
+		String marca = scanner.nextLine();
 		System.out.println("Modelo: \n");
-		String modelo = input.nextLine();
+		String modelo = scanner.nextLine();
 		System.out.println("Ano: \n");
-		String ano = input.nextLine();
+		String ano = scanner.nextLine();
 		System.out.println("Valor: \n");
-        String valor = input.nextLine();
+		String valor = scanner.nextLine();
+		
+		// fechando o scanner
+		scanner.close();
 	}
-	/*
-	double PrecoTotal() {
-		double total = 0;
-		for (Veiculo veiculo : veiculo) {
-			total += veiculo.valorLoc;
-		}
-		return total;
-	}*/
-
+	
 	//Método exibir veiculo
 	public static void printVeiculo() {
 		System.out.println();

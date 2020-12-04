@@ -1,7 +1,10 @@
+package models;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
+
+import controller.Database;
 
 public class Cliente {
     protected static int idCliente;
@@ -15,6 +18,8 @@ public class Cliente {
 
     //classe database
     public static Database<Cliente> data = new Database();
+
+    
 
     // constructor
     public Cliente(String nome, String dataDeNascimento, String cpf, int diasParaDevolucao) {
@@ -34,14 +39,23 @@ public class Cliente {
 
     // Método cadastrar cliente
     public static void addCliente() {
-        Scanner input = new Scanner(System.in);
+
+        //criando o scanner
+        Scanner scanner;
+
+        //inicializando o scanner
+        scanner = new Scanner(System.in); 
+
         System.out.println("Cadastro do cliente\n");
-        System.out.println("Nome do Clente?\n");
-        String nome = input.nextLine();
-        System.out.println("Data de nascimento?\n");
-        String dataDeNascimento = input.nextLine();
-        System.out.println("CPF do Clente?\n");
-        String cpf = input.nextLine();
+        System.out.println("Nome do Clente: \n");
+        String nome = scanner.nextLine();
+        System.out.println("Data de nascimento: \n");
+        String dataDeNascimento = scanner.nextLine();
+        System.out.println("CPF do Clente: \n");
+        String cpf = scanner.nextLine();
+
+        // fechando o scanner
+        scanner.close();
     }
 
     // Método exibir cliente
