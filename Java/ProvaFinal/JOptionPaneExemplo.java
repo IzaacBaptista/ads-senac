@@ -56,7 +56,7 @@ public class JOptionPaneExemplo extends JFrame   {
             JOptionPane.QUESTION_MESSAGE
         );
 
-        if(retorno == JOptionPane.OK_CANCEL_OPTION) {
+        if(retorno == JOptionPane.OK_OPTION) {
             System.exit(0);
         } 
     }

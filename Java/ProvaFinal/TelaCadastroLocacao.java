@@ -1,4 +1,3 @@
-package view;
 
 import java.awt.Container;
 import java.awt.GridLayout;
@@ -14,7 +13,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class TelaCadastroVeiculo extends JFrame {
+public class TelaCadastroLocacao extends JFrame {
 
     JMenuItem menuItemAbrir = new JMenuItem("Abrir");
     JMenuItem menuItemNovo = new JMenuItem("Novo");
@@ -42,21 +41,19 @@ public class TelaCadastroVeiculo extends JFrame {
 
     JMenuBar menuBar = new JMenuBar();
 
-    JTextField campoPlaca = new JTextField();
-    JTextField campoRenavam = new JTextField();
-    JTextField campoMarca = new JTextField();
-    JTextField campoModelo = new JTextField();
-    JTextField campoChassi = new JTextField();
-    JTextField campoAno = new JTextField();
-    JTextField campoCor = new JTextField();
+    JTextField campoNomeCliente = new JTextField();
+    JTextField campoDiasLocacao = new JTextField();
+    JTextField campoDiasParaDevolucao = new JTextField();
+    JTextField campoModeloCarro = new JTextField();
+    JTextField campoMarcaCarro = new JTextField();
+    JTextField campoCorCarro = new JTextField();
 
-    JLabel placa = new JLabel("Placa:");
-    JLabel renavam = new JLabel("Renavam:");
-    JLabel marca = new JLabel("Marca:");
-    JLabel modelo = new JLabel("Modelo:");
-    JLabel chassi = new JLabel("Chassi:");
-    JLabel ano = new JLabel("Ano:");
-    JLabel cor = new JLabel("Cor:");
+    JLabel nomeCliente = new JLabel("Nome Cliente:");
+    JLabel diasLocacao = new JLabel("Dias de Locacao:");
+    JLabel diasParaDevolucao = new JLabel("Dias Para Devolucao:");
+    JLabel modeloCarro = new JLabel("Modelo do Carro:");
+    JLabel marcaCarro = new JLabel("Marca do Carro:");
+    JLabel corCarro = new JLabel("Cor do Carro:");
 
     JTextArea textArea = new JTextArea("Comentários", 10, 20);
     JScrollPane scrollPane = new JScrollPane(textArea);
@@ -64,7 +61,7 @@ public class TelaCadastroVeiculo extends JFrame {
     JButton oK = new JButton("OK");
     JButton cancelarCadastro = new JButton("Cancelar");
 
-    public TelaCadastroVeiculo(String titulo) {
+    public TelaCadastroLocacao(String titulo) {
         super(titulo);
     }
 
@@ -105,30 +102,28 @@ public class TelaCadastroVeiculo extends JFrame {
         setLayout(new FlowLayout());
         Container cp = getContentPane();
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(4, 4));
-        panel.add(placa);
-        panel.add(campoPlaca);
-        panel.add(renavam);
-        panel.add(campoRenavam);
-        panel.add(marca);
-        panel.add(campoMarca);
-        panel.add(modelo);
-        panel.add(campoModelo);
-        panel.add(chassi);
-        panel.add(campoChassi);
-        panel.add(ano);
-        panel.add(campoAno);
-        panel.add(cor);
-        panel.add(campoCor);
+        panel.setLayout(new GridLayout(3, 3));
+        panel.add(nomeCliente);
+        panel.add(campoNomeCliente);
+        panel.add(diasLocacao);
+        panel.add(campoDiasLocacao);
+        panel.add(diasParaDevolucao);
+        panel.add(campoDiasParaDevolucao);
+        panel.add(modeloCarro);
+        panel.add(campoModeloCarro);
+        panel.add(marcaCarro);
+        panel.add(campoMarcaCarro);
+        panel.add(corCarro);
+        panel.add(campoCorCarro);
         cp.add(panel);
 
         JPanel panel2 = new JPanel();
-        panel2.setLayout(new GridLayout(1, 1));
+        panel2.setLayout(new GridLayout(2, 2));
         panel2.add(textArea);
         cp.add(panel2);
 
         JPanel panel3 = new JPanel();
-        panel3.setLayout(new GridLayout(2, 2));
+        panel3.setLayout(new GridLayout(4, 1));
         panel3.add(oK);
         panel3.add(cancelarCadastro);
         cp.add(panel3);
@@ -144,7 +139,8 @@ public class TelaCadastroVeiculo extends JFrame {
     }
 
     public static void main(String[] args) {
-        TelaCadastroVeiculo executar = new TelaCadastroVeiculo("Cadastro de Veiculo");
+        TelaCadastroLocacao executar = new TelaCadastroLocacao("Cadastro de Veiculo");
         executar.mostrarTela();
     }
+
 }
