@@ -36,13 +36,6 @@ public class Cliente {
     public static void addCliente() {
         Scanner input = new Scanner(System.in);
         System.out.println("Cadastro do cliente\n");
-        System.out.println("Nome do Clente?\n");
-        String nome = input.nextLine();
-        System.out.println("Data de nascimento?\n");
-        String dataDeNascimento = input.nextLine();
-        System.out.println("CPF do Clente?\n");
-        String cpf = input.nextLine();
-    }
 
     // Método exibir cliente
     public static void printCliente() {

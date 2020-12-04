@@ -7,8 +7,8 @@ public class Conexao {
     
     public static Connection getConnection() throws Exception {
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-            final String url = "jdbc:mysql://localhost:3306/sakila";
+            //Class.forName("com.mysql.jdbc.Driver");
+            final String url = "jdbc:mysql://localhost:3306/sistema_locadora?useTimezone=true&serverTimezone=UTC";
             final String user = "root";
             final String password = "";
 
@@ -18,5 +18,6 @@ public class Conexao {
             throw new RuntimeException(e);
         }
     }
+    
     
 }
